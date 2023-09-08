@@ -1,0 +1,14 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    text-align: center;
+    font-size: 250%;
+    background-color: #007afc;
+    color: whitesmoke;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
