@@ -12,3 +12,16 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.InputSelectLuas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
