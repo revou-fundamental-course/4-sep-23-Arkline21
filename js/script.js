@@ -1,16 +1,26 @@
+const vField = document.getElementById('iField');
+const stateLuas = document.getElementById('bLuas');
+const stateReset = document.getElementById('bReset');
+const stateKeliling = document.getElementById('bKeliling');
+const vOutField = document.getElementsByClassName('CalcResult');
+
 function CalcLuas() {
-    const sisi = parseFloat(document.getElementsByClassName('InputField').value);
-    const luas = sisi * sisi;
-    document.getElementsByClassName('CalcResult').textContent = "Luas Persegi: " + luas;
+    var sisi = vField.value;
+    var rLuas = sisi * sisi;
+    vOutField.textContent = 'Luas Persegi =' + rLuas;
 }
 
 function CalcKeliling() {
-    const sisi = parseFloat(document.getElementsByClassName('InputField').value);
-    const keliling = 4 * sisi;
-    document.getElementsByClassName('CalcResult').textContent = "Keliling Persegi: " + keliling;
+    var sisi = vField.value;
+    var rKeliling = sisi * 4;
+    vOutField.textContent = 'Luas Persegi =' + rKeliling;
 }
 
-function CalcReset(){
-    document.getElementsByClassName('InputField').value = '';
-    document.getElementsByClassName('CalcResult').textContent = "";
+function CalcReset() {
+    vField.value = '';
+    vOutField.textContent = '';
 }
+
+stateLuas.addEventListener('click', CalcLuas() )
+stateKeliling.addEventListener('click', CalcKeliling () )
+stateReset.addEventListener('click', CalcReset() )
