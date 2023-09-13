@@ -1,26 +1,31 @@
-const vField = document.getElementById('iField');
-const stateLuas = document.getElementById('bLuas');
-const stateReset = document.getElementById('bReset');
-const stateKeliling = document.getElementById('bKeliling');
-const vOutField = document.getElementsByClassName('CalcResult');
+const iField = document.getElementById('iField')
+const sLuas = document.getElementById('bLuas')
+const sReset = document.getElementById('bReset')
+const sKeliling = document.getElementById('bKeliling')
+const oField = document.getElementById('oField')
+var sisi = ""
+
+iField.addEventListener('input', function() {
+    var IValue = iField.value.trim()
+    console.log(IValue)
+})
 
 function CalcLuas() {
-    var sisi = vField.value;
-    var rLuas = sisi * sisi;
-    vOutField.textContent = 'Luas Persegi =' + rLuas;
+    sisi = iField.value.trim()
+    var rLuas = sisi * sisi
+    oField.textContent = 'Luas Persegi = ' + rLuas
+    console.log(oField.textContent)
 }
 
 function CalcKeliling() {
-    var sisi = vField.value;
-    var rKeliling = sisi * 4;
-    vOutField.textContent = 'Luas Persegi =' + rKeliling;
+    sisi = iField.value.trim()
+    var rKeliling = sisi * 4
+    oField.textContent = 'Keliling Persegi = ' + rKeliling
+    console.log(oField.textContent)
 }
 
 function CalcReset() {
-    vField.value = '';
-    vOutField.textContent = '';
+    iField.value = ''
+    oField.textContent = ''
+    console.log('all Field Reset')
 }
-
-stateLuas.addEventListener('click', CalcLuas() )
-stateKeliling.addEventListener('click', CalcKeliling () )
-stateReset.addEventListener('click', CalcReset() )
