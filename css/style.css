@@ -21,6 +21,13 @@ p {
     text-align: center;
 }
 
+img {
+   display: block;
+   margin-right: auto;
+   margin-left: auto;
+   width: 20%;
+}
+
 label {
     display: block;
     margin-bottom: 4px;
@@ -28,14 +35,29 @@ label {
     font-weight: bold;
 }
 
-.InputSelectLuas {
+.InputSelect {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
     text-align: center;
 }
 
+.OutputResult {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    text-align: center;
+}
+
+
 input{
+    padding: 10px 16px;
+    border: 1px solid #337CCF;
+    border-radius: 4px;
+    outline: none;
+}
+
+output {
     padding: 10px 16px;
     border: 1px solid #337CCF;
     border-radius: 4px;
@@ -62,6 +84,15 @@ button:hover{
 
 button:active{
     transform: translateY(2px);
+}
+
+.SMode {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    outline: none;
 }
 
 .InputButtonSection {
